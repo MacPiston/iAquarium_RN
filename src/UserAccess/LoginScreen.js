@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {View, Text, StyleSheet, TextInput, Button, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import BlueGradientColors from '../reusable/BackgroundGradient';
 import HairlineSeparator from '../reusable/Separators';
 import auth from '@react-native-firebase/auth';
 
@@ -29,7 +28,7 @@ const LoginScreen = (props) => {
   }
 
   return (
-    <LinearGradient style={{flex: 1}} colors={BlueGradientColors}>
+    <LinearGradient style={{flex: 1}} colors={gradientColors}>
       <View style={stylesList.viewStyle}>
         <Text style={stylesList.titleStyle}>Welcome to iAquarium!</Text>
         <View style={stylesList.imageContainerStyle}>
@@ -135,5 +134,7 @@ const stylesList = StyleSheet.create({
     color: 'white',
   },
 });
+
+const gradientColors = ['white', '#00a6ff'];
 
 export default LoginScreen;

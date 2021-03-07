@@ -2,7 +2,6 @@ import * as React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
-import BlueGradientColors from '../reusable/BackgroundGradient';
 import {useState} from 'react/cjs/react.development';
 import {Overlay, Icon} from 'react-native-elements';
 
@@ -80,7 +79,7 @@ const TankSummary = ({navigation}) => {
   return (
     <LinearGradient
       style={{width: '100%', height: '100%'}}
-      colors={BlueGradientColors}>
+      colors={gradientColors}>
       <View>
         <Overlay isVisible={overlayVisible} onBackdropPress={toggleOverlay}>
           <Text
@@ -194,5 +193,7 @@ const stylesList = StyleSheet.create({
     elevation: 4,
   },
 });
+
+const gradientColors = ['white', '#00a6ff'];
 
 export default TankSummary;

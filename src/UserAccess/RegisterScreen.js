@@ -1,12 +1,11 @@
 import * as React from 'react';
 import {View, Text, StyleSheet, TextInput, Button, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import BlueGradientColors from '../reusable/BackgroundGradient';
 import auth from '@react-native-firebase/auth';
 
 const RegisterScreen = () => {
   return ( 
-  <LinearGradient style={{flex: 1}} colors={BlueGradientColors}>
+  <LinearGradient style={{flex: 1}} colors={gradientColors}>
       <View style={stylesList.viewStyle}>
         <Text style={stylesList.titleStyle}>Create account</Text>
       </View>
@@ -35,5 +34,7 @@ const stylesList = StyleSheet.create({
     marginTop: 10,
   },
 });
+
+const gradientColors = ['white', '#00a6ff'];
 
 export default RegisterScreen;
