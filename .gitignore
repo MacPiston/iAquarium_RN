@@ -57,3 +57,6 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+/run_metro.sh
+/run_iOS.sh
+/workspace.code-workspace
